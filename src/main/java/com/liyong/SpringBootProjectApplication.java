@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-@MapperScan("com.lyong.dao")
+@MapperScan("com.liyong.dao")
 public class SpringBootProjectApplication {
 
 	public static void main(String[] args) {

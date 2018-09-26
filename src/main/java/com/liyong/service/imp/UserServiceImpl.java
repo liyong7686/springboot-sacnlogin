@@ -8,17 +8,17 @@ import com.liyong.dao.UserDao;
 import com.liyong.entity.User;
 import com.liyong.service.UserService;
 
-@Service("userService")
+@Service(value = "userService")
 public class UserServiceImpl implements UserService{
 
 	@Resource
     private UserDao userDao;
 		
 	@Override
-	public boolean addUser(User record) {
+	public boolean addUser(User user) {
 		boolean result = false;
         try {
-            userDao.insertSelective(record);
+            userDao.insert(user);
             result = true;
         } catch (Exception e) {
             e.printStackTrace();

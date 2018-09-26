@@ -24,7 +24,7 @@ public class SpringBootProjectApplicationTests {
 	@Test
 	public void test1(){
 		
-		this.userService.addUser(new User("222rrr","33333",12));
+		this.userService.addUser(new User("222r","33333",12));
 		
 	}
 	

@@ -1,8 +1,8 @@
-package com.liyong.dao;
+package com.liyong.mapper;
 
-import com.liyong.entity.User;
+import com.liyong.model.User;
 
-public interface UserDao {
+public interface UserMapper {
 
     int deleteByPrimaryKey(String id);
 

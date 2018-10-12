@@ -1,6 +1,6 @@
 package com.liyong.service;
 
-import com.liyong.entity.User;
+import com.liyong.model.User;
 
 public interface UserService {
 	

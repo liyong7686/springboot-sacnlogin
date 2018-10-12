@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.liyong.dao.UserDao" >
+<mapper namespace="com.liyong.mapper.UserMapper" >
   
-  <resultMap id="BaseResultMap" type="com.liyong.entity.User" >
+  <resultMap id="BaseResultMap" type="com.liyong.model.User" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="valueNum" property="valueNum" jdbcType="INTEGER" />
@@ -24,7 +24,7 @@
     where id = #{id,jdbcType=VARCHAR}
   </delete>
   
-  <insert id="insert" parameterType="com.liyong.entity.User" >
+  <insert id="insert" parameterType="com.liyong.model.User" >
     <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -32,7 +32,7 @@
     values (#{id,jdbcType=VARCHAR},#{name,jdbcType=VARCHAR}, #{valueNum,jdbcType=INTEGER})
   </insert>
   
-  <insert id="insertSelective" parameterType="com.liyong.entity.User" >
+  <insert id="insertSelective" parameterType="com.liyong.model.User" >
     <selectKey resultType="java.lang.String" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -55,7 +55,7 @@
     </trim>
   </insert>
   
-  <update id="updateByPrimaryKeySelective" parameterType="com.liyong.entity.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.liyong.model.User" >
     update test_user
     <set >
       <if test="name != null" >
@@ -68,7 +68,7 @@
     where id = #{id,jdbcType=VARCHAR}
   </update>
   
-  <update id="updateByPrimaryKey" parameterType="com.liyong.entity.User" >
+  <update id="updateByPrimaryKey" parameterType="com.liyong.model.User" >
     update test_user
     set name = #{name,jdbcType=VARCHAR},
       valueNum = #{valueNum,jdbcType=INTEGER}

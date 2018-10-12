@@ -4,21 +4,22 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.liyong.dao.UserDao;
-import com.liyong.entity.User;
+import com.liyong.mapper.UserMapper;
+import com.liyong.model.User;
 import com.liyong.service.UserService;
+
 
 @Service(value = "userService")
 public class UserServiceImpl implements UserService{
 
 	@Resource
-    private UserDao userDao;
+    private UserMapper userMapper;
 		
 	@Override
 	public boolean addUser(User user) {
 		boolean result = false;
         try {
-            userDao.insert(user);
+        	userMapper.insert(user);
             result = true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -30,7 +31,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User getUserById(String userId) {
-		return userDao.selectByPrimaryKey(userId);
+		return userMapper.selectByPrimaryKey(userId);
 	}
 
 }

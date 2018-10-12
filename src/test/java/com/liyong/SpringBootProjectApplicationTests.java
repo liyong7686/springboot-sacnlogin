@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.liyong.entity.User;
+import com.liyong.model.User;
 import com.liyong.service.UserService;
 
 @RunWith(SpringRunner.class)
@@ -24,7 +24,7 @@ public class SpringBootProjectApplicationTests {
 	@Test
 	public void test1(){
 		
-		this.userService.addUser(new User("222r","33333",12));
+		//this.userService.addUser(new User("222r","33333",12));
 		
 	}
 	

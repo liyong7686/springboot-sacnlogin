@@ -1,4 +1,4 @@
-package com.liyong.entity;
+package com.liyong.model;
 
 public class User {
 

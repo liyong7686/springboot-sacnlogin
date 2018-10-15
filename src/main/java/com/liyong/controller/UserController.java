@@ -18,7 +18,7 @@ public class UserController{
 	@Autowired
 	private UserService userService;
 	
-	@GetMapping("/user")
+	@RequestMapping("/index")
     public ModelAndView index(String name) {
 		System.out.println("---------------------------- ");
 		ModelAndView mv = new ModelAndView();
@@ -29,7 +29,7 @@ public class UserController{
         
         Random random = new Random();
         int sRandom = random.nextInt(300) % (300 - 1 + 1) + 1;
-        this.userService.addUser(new User("" + sRandom ,"test_001", 334333));
+        this.userService.addUser(new User("" + sRandom ,"test_001", 334333,"123123"));
         
         return mv;
     }

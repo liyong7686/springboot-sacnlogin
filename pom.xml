@@ -70,6 +70,45 @@
 		</dependency>
 				
 		
+		 <dependency>  
+            <groupId>org.apache.shiro</groupId>  
+            <artifactId>shiro-core</artifactId>  
+            <version>1.2.2</version>  
+        </dependency> 
+       <dependency>
+           <groupId>org.apache.shiro</groupId>
+           <artifactId>shiro-spring</artifactId>
+           <version>1.2.2</version>
+       </dependency>		
+       <!-- shiro ehcache -->
+       <!-- dependency>
+           <groupId>org.apache.shiro</groupId>
+           <artifactId>shiro-ehcache</artifactId>
+           <version>1.2.2</version>
+       </dependency -->
+       
+       <!-- servlet 依赖. -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <!-- tomcat 的支持.-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
 	  </dependencies>
 
 	<build>

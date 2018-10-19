@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.example</groupId>
-	<artifactId>springBootProject</artifactId>
+	<groupId>com.liyong</groupId>
+	<artifactId>springBoot-scanlogin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -67,19 +67,7 @@
 		<dependency>
 		  <groupId>org.springframework.boot</groupId>
 		  <artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-				
-		
-		 <dependency>  
-            <groupId>org.apache.shiro</groupId>  
-            <artifactId>shiro-core</artifactId>  
-            <version>1.2.2</version>  
-        </dependency> 
-       <dependency>
-           <groupId>org.apache.shiro</groupId>
-           <artifactId>shiro-spring</artifactId>
-           <version>1.2.2</version>
-       </dependency>		
+		</dependency>	
        <!-- shiro ehcache -->
        <!-- dependency>
            <groupId>org.apache.shiro</groupId>

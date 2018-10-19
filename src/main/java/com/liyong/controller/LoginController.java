@@ -34,6 +34,7 @@ public class LoginController {
     private String appsecret;
 	
 	
+    /** 以下代码为微信授权登陆部分---------------start---------------------------------- **/
 	 @RequestMapping("/index")
      public String index(Model model) throws UnsupportedEncodingException {
 		 
@@ -41,20 +42,19 @@ public class LoginController {
 		 System.out.println("--------");
 		 System.out.println(callBack);
 		 
-        //String oauthUrl = "https://open.weixin.qq.com/connect/qrconnect?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect";
-        String oauthUrl ="https://open.weixin.qq.com/connect/qrconnect?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=3d6be0a4035d839573b04816624a415e#wechat_redirect";
+        String oauthUrl ="https://open.weixin.qq.com/connect/qrconnect?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect";
         String redirect_uri = URLEncoder.encode(callBack, "utf-8");
         oauthUrl =  oauthUrl.replace("APPID",appid).replace("REDIRECT_URI",redirect_uri).replace("SCOPE",scope);
-        model.addAttribute("name","liuzp");
+        model.addAttribute("name","hello");
         model.addAttribute("oauthUrl",oauthUrl);
-        System.out.println("oauthUrl：" + oauthUrl);
+        System.out.println(oauthUrl);
         return "index";
      }
 
-	 @RequestMapping("/1")
+	 @RequestMapping("/index1")
      public String index1(Model model) throws UnsupportedEncodingException {
         String redirect_uri = URLEncoder.encode(callBack, "utf-8"); ;
-        model.addAttribute("name","liuzp");
+        model.addAttribute("name","自定义登陆");
         model.addAttribute("appid",appid);
         model.addAttribute("scope",scope);
         model.addAttribute("redirect_uri",redirect_uri);
@@ -110,5 +110,8 @@ public class LoginController {
             return "fail";
         }
 	}
+	
+    /** 以下代码为微信授权登陆部分---------------end---------------------------------- **/
+
 	 
 }
